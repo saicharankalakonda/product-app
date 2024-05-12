@@ -21,7 +21,10 @@ public class ProductController {
     public List<Product> showRegistrationForm() {
         return prodRepo.findAll();
     }
-
+    @GetMapping(value = "/getAllPosts")
+    public List<Product> showRegistrationForm1() {
+        return prodRepo.findAll();
+    }
     @PostMapping(value="/post")
     public Product postProducts(@RequestBody Product p){
         prodRepo.save(p);
